@@ -1,0 +1,29 @@
+<router-outlet></router-outlet>
+<div class="container">
+    <header class="header">
+      <app-nav-bar-component></app-nav-bar-component>
+    </header>
+  
+    <main>
+      <section class="chat-container">
+        <h2>Chat with fellow language learners!</h2>
+  
+        <div class="chat-messages" #chatMessages>
+          <div class="message" *ngFor="let message of messages">
+            <span class="username">{{ message.user }}</span>
+            <p>{{ message.content }}</p>
+          </div>
+        </div>
+  
+        <form class="chat-form" (ngSubmit)="sendMessage()" >
+          <input type="text" [(ngModel)]="newMessage" name="message" placeholder="Type your message..." required>
+          <button type="submit">Send</button>
+        </form>
+      </section>
+    </main>
+  <br>
+    <footer class="footer">
+      <p>&copy; LingoMaster {{ currentYear }}</p>
+    </footer>
+  </div>
+  

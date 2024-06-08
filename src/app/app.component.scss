@@ -1,0 +1,145 @@
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+    
+}
+
+.header {
+  display: flex;
+  //justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+app-nav-bar-component {
+    display: inline-block;
+    height: 10%;
+    width: 100%;
+  }
+
+.logo {
+  width: 150px;
+  height: auto;
+}
+
+.navbar {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    margin-right: 1rem;
+
+    a {
+      text-decoration: none;
+      color: #333;
+      transition: color 0.2s ease-in-out;
+
+      &:hover {
+        color: #007bff;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+    margin-top: 1rem;
+
+    li {
+      margin: 0.5rem 0;
+    }
+  }
+}
+
+.hero {
+  text-align: center;
+  padding: 2rem;
+  margin-bottom: 2rem;
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+
+    &:hover {
+      background-color: #0069d9;
+    }
+  }
+}
+h2{
+    text-align: center;
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .feature-card {
+    width: calc(33% - 1.5rem); /* Adjust spacing as needed */
+    margin-bottom: 1rem;
+    text-align: center;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+
+    img {
+      width: 100%;
+      margin-bottom: 0.5rem;
+    }
+
+    h3 {
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+
+/* Styles for the chat component (assuming chat.component.scss exists) */
+/* Include styles from chat.component.scss here */
+@media (max-width: 768px) {
+  .features {
+    flex-direction: column;
+
+    .feature-card {
+      width: 100%;
+    }
+  }
+}
+
+.footer {
+  p {
+    text-align: center;
+    margin-bottom: 0;
+  }
+}

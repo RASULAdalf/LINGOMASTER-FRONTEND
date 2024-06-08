@@ -1,0 +1,29 @@
+<router-outlet *ngIf="!this.router.url.includes('home')"></router-outlet>
+
+<div class="container" *ngIf="this.router.url.includes('home')">
+  <header class="header">
+    <app-nav-bar-component></app-nav-bar-component>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Learn a New Language with Ease and Fun</h1>
+      <p>Welcome to LingoMaster! We offer a unique and engaging way to learn languages, making the process enjoyable and effective.</p>
+      <button routerLink="/lessons">Get Started</button>
+    </section>
+    
+    <h2>Our Features</h2><br>
+    <section class="features">
+          <div class="feature-card" *ngFor="let feature of features">
+        <img [src]="feature.image" alt="{{ feature.title }}">
+        <h3>{{ feature.title }}</h3>
+        <p>{{ feature.description }}</p>
+      </div>
+    </section>
+
+    </main>
+
+  <footer class="footer">
+    <p>&copy; LingoMaster {{ currentYear }}</p>
+  </footer>
+</div>
