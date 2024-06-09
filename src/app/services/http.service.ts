@@ -17,7 +17,7 @@ export class HttpService {
   }
 
   public get(url: any):Observable<any> {
-    return this.http.get(this.BaseUrl+url)
+    return this.http.get(this.BaseUrl+url).pipe(timeout(60000))
 }
 
   public delete(url: any):Observable<any> {

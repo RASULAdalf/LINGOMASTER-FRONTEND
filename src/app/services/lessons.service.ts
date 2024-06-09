@@ -10,7 +10,7 @@ export class LessonsService {
   constructor(private httpService:HttpService) { }
   public generateLessons(lang:any='English'){
     if (this.LessonsData.length>0) return;
-    this.httpService.get('lesson/suggest?prefLang='+lang).pipe(timeout({ each: 60_000 })).subscribe(data=>{
+    this.httpService.get('lesson/suggest?prefLang='+lang).subscribe(data=>{
       this.LessonsData = data.data;
       console.log(this.LessonsData);
       
