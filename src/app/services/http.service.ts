@@ -1,12 +1,12 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable,timeout } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class HttpService {
-  private BaseUrl = 'http://localhost:8085/api/v1/';
+  private BaseUrl = 'https://lingomaster-backend-production.up.railway.app:8085/api/v1/';
   constructor(private http:HttpClient) { }
 
   public post(url:any,data:any):Observable<any>{
@@ -18,7 +18,7 @@ export class HttpService {
 
   public get(url: any):Observable<any> {
     return this.http.get(this.BaseUrl+url)
-  }
+}
 
   public delete(url: any):Observable<any> {
     return this.http.delete(this.BaseUrl+url);
