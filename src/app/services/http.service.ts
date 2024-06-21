@@ -6,7 +6,7 @@ import { Observable,timeout } from 'rxjs';
   providedIn: 'root'
 })
 export class HttpService {
-  private BaseUrl = 'https://lingomaster-backend-production.up.railway.app:8085/api/v1/';
+  private BaseUrl = 'https://lingomaster-backend.onrender.com:8085/api/v1/';
   constructor(private http:HttpClient) { }
 
   public post(url:any,data:any):Observable<any>{
