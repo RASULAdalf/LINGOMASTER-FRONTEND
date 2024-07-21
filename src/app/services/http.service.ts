@@ -6,7 +6,7 @@ import { Observable,timeout } from 'rxjs';
   providedIn: 'root'
 })
 export class HttpService {
-  private BaseUrl = 'https://lingomaster-backend.vercel.app:8085/api/v1/';
+  private BaseUrl = 'https://us-central1-lingomaster-app.cloudfunctions.net/backend:8085/api/v1/';
   constructor(private http:HttpClient) { }
 
   public post(url:any,data:any):Observable<any>{
