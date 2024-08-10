@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { LessonsService } from '../../services/lessons.service';
+import { LessonsService } from './services/lessons.service';
 import { Router } from '@angular/router';
-import { LoadingService } from './services/loading.service';
+import { LoadingService } from '../../services/loading.service';
 
 @Component({
   selector: 'app-lessons',
@@ -12,8 +12,8 @@ export class LessonsComponent {
   constructor(public lessonService:LessonsService,private router:Router,public loadingService:LoadingService) {
     if (this.lessonService.LessonsData.length>0) return;
     
-    this.lessonService.generateLessons(prompt("Enter your language"));
-   }
+    this.lessonService.generateLessons(prompt("Enter your language"))
+  }
 
   ngOnInit(): void {
     

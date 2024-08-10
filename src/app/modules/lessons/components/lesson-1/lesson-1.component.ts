@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { LessonsService } from '../../../../services/lessons.service';
+import { LessonsService } from '../../services/lessons.service';
 import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({

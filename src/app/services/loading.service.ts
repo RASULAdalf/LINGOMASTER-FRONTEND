@@ -6,6 +6,6 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class LoadingService {
   public progrssBarLoadingState:BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
-
+  
   constructor() { }
 }

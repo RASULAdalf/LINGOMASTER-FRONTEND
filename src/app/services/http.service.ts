@@ -6,7 +6,7 @@ import { Observable,timeout } from 'rxjs';
   providedIn: 'root'
 })
 export class HttpService {
-  private BaseUrl = 'https://us-central1-lingomaster-app.cloudfunctions.net:8085/backend/api/v1/';
+  private BaseUrl = 'http://localhost:8080/api/v1/';
   constructor(private http:HttpClient) { }
 
   public post(url:any,data:any):Observable<any>{
@@ -17,7 +17,7 @@ export class HttpService {
   }
 
   public get(url: any):Observable<any> {
-    return this.http.get(this.BaseUrl+url).pipe(timeout(60000))
+    return this.http.get(this.BaseUrl+url,{observe:'events',responseType:'text'}).pipe(timeout(9000000))
 }
 
   public delete(url: any):Observable<any> {
